@@ -25,7 +25,7 @@ int main() {
     char pib[20];
     char pontosturisticos[20];
     char cidade [50];
-    char codigo [3];
+    char codigo [20];
     char pais [20];
     char estado [20];
 
@@ -57,11 +57,10 @@ int main() {
     printf ("País: %s \n", pais);
     printf ("Estado: %s \n", estado);
     printf ("Cidade: %s \n", cidade);
-    printf ("População: %d \n", populacao);
-    printf ("Área da cidade: %d \n", area);
+    printf ("População: %s \n", populacao);
+    printf ("Área da cidade: %s \n", area);
     printf ("PIB da cidade: %s \n", pib);
-    printf ("Pontos turísticos: %d \n", pontosturisticos);
-
-
+    printf ("Pontos turísticos: %s \n", pontosturisticos);
+ 
     return 0;
 }
