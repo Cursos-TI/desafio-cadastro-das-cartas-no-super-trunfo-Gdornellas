@@ -20,47 +20,47 @@ int main() {
 
     
 
-    int populacao;
-    float area;
-    float pib;
-    int pontosturisticos;
+    char populacao [20]; 
+    char area[20];
+    char pib[20];
+    char pontosturisticos[20];
     char cidade [50];
     char codigo [3];
     char pais [20];
     char estado [20];
 
     printf ("País: \n");
-    scanf ("%s", &pais);
+    fgets (pais, 20, stdin);
 
     printf ("Cadastre o estado: \n");
-    scanf ("%s", &estado);
+    fgets (estado, 20, stdin);
 
     printf ("Cadastre a cidade: \n");
-    scanf ("%s", &cidade);
+    fgets (cidade, 20, stdin);
 
     printf ("Cadastre o código da carta: \n");
-    scanf ("%s", &codigo);
+    fgets (codigo, 20, stdin);
 
     printf ("Cadastre a população da cidade: \n");
-    scanf ("%d", &populacao);
+    fgets (populacao, 20, stdin);
 
     printf ("Cadastre a área da cidade: \n");
-    scanf ("%f", &area);
+    fgets (area, 20, stdin);
 
     printf ("Cadastre o o PIB da cidade: \n");
-    scanf ("%f", &pib);
+    fgets (pib, 20, stdin);
 
     printf ("Cadastre a quantidade de pontos turísticos da cidade: \n");
-    scanf ("%d", &pontosturisticos);
+    fgets (pontosturisticos, 20, stdin);
 
-    printf ("Código da carta: %s\n", codigo);
-    printf ("País: %s\n", pais);
-    printf ("Estado: %s\n", estado);
-    printf ("Cidade: %s\n", cidade);
-    printf ("População: %d\n", populacao);
-    printf ("Área da cidade: %d\n", area);
-    printf ("PIB da cidade: %s\f", pib);
-    printf ("Pontos turísticos: %d\n", pontosturisticos);
+    printf ("Código da carta: %s \n", codigo);
+    printf ("País: %s \n", pais);
+    printf ("Estado: %s \n", estado);
+    printf ("Cidade: %s \n", cidade);
+    printf ("População: %d \n", populacao);
+    printf ("Área da cidade: %d \n", area);
+    printf ("PIB da cidade: %s \n", pib);
+    printf ("Pontos turísticos: %d \n", pontosturisticos);
 
 
     return 0;
