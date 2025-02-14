@@ -19,48 +19,62 @@ int main() {
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
     
+   
+    char cartas [8][8][20]; // matriz para armazenar 8 cartas com 8 campos de 20 caracteres cada
 
-    char populacao [20]; 
-    char area[20];
-    char pib[20];
-    char pontosturisticos[20];
-    char cidade [50];
-    char codigo [20];
-    char pais [20];
-    char estado [20];
-
+    for (int l = 0; l < 8 ; l++)
+    {
+      
     printf ("País: \n");
-    fgets (pais, 20, stdin);
+    fgets (cartas[l][0], 20, stdin);
 
     printf ("Cadastre o estado: \n");
-    fgets (estado, 20, stdin);
+    fgets (cartas[l][1], 20, stdin);
 
     printf ("Cadastre a cidade: \n");
-    fgets (cidade, 20, stdin);
+    fgets (cartas[l][2], 20, stdin);
 
     printf ("Cadastre o código da carta: \n");
-    fgets (codigo, 20, stdin);
+    fgets (cartas[l][3], 20, stdin);
 
     printf ("Cadastre a população da cidade: \n");
-    fgets (populacao, 20, stdin);
+    fgets (cartas[l][4], 20, stdin);
 
     printf ("Cadastre a área da cidade: \n");
-    fgets (area, 20, stdin);
+    fgets (cartas[l][5], 20, stdin);
 
     printf ("Cadastre o o PIB da cidade: \n");
-    fgets (pib, 20, stdin);
+    fgets (cartas[l][6], 20, stdin);
 
     printf ("Cadastre a quantidade de pontos turísticos da cidade: \n");
-    fgets (pontosturisticos, 20, stdin);
+    fgets (cartas[l][7], 20, stdin);
+      
 
-    printf ("Código da carta: %s \n", codigo);
-    printf ("País: %s \n", pais);
-    printf ("Estado: %s \n", estado);
-    printf ("Cidade: %s \n", cidade);
-    printf ("População: %s \n", populacao);
-    printf ("Área da cidade: %s \n", area);
-    printf ("PIB da cidade: %s \n", pib);
-    printf ("Pontos turísticos: %s \n", pontosturisticos);
- 
+    }
+
+    for (int n = 0; n < 8; n++) { 
+        // Remover o caractere de nova linha
+        for (int m = 0; m < 8; m++) {
+            size_t len = strlen(cartas[n][m]);
+            if (len > 0 && cartas[n][m][len - 1] == '\n') {
+                cartas[n][m][len - 1] = '\0';
+            }
+        }
+    
+       
+    
+    printf ("Código da carta: %s \n", cartas [n][3]);
+    printf ("País: %s \n", cartas [n][0]);
+    printf ("Estado: %s \n", cartas [n][1]);
+    printf ("Cidade: %s \n", cartas [n][2]);
+    printf ("População: %s \n", cartas [n][4]);
+    printf ("Área da cidade: %s \n", cartas [n][5]);
+    printf ("PIB da cidade: %s \n", cartas [n][6]);
+    printf ("Pontos turísticos: %s \n", cartas [n][7]);
+    printf ("\n");
+    
+    }
+
+
     return 0;
 }
